@@ -28,6 +28,8 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 10
 vim.opt.signcolumn = "yes"
 
+vim.opt.laststatus = 3
+
 vim.opt.clipboard = "unnamedplus"
 
 vim.cmd "set whichwrap+=<,>,[,]"
