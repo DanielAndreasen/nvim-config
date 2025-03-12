@@ -28,3 +28,9 @@ vim.keymap.set("v", ">", ">gv")
 
 vim.keymap.set("v", "<space>", ":fold<CR>", hush)
 vim.keymap.set("n", "<space>", "zA", hush)
+
+
+vim.keymap.set('n', '<leader>cc', "<cmd>CodeCompanion<CR>", hush)
+vim.keymap.set('n', '<leader>ct', "<cmd>CodeCompanionChat Toggle<CR>", hush)
+vim.keymap.set('v', '<leader>ce', "<cmd>CodeCompanion /explain<CR>", hush)
+vim.keymap.set('v', '<leader>cd', "<cmd>CodeCompanion Can you write a docstring for this function?<CR>", hush)

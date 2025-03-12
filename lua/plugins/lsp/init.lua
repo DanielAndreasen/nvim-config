@@ -150,15 +150,13 @@ return {
                                     },
                                     diagnosticSeverityOverrides = {
                                         reportAny = false,
-                                        -- reportUnusedCallResult = false,
-                                        -- reportMissingTypeArgument = false,
-                                        -- reportMissingParameterType = false,
                                         reportUnknownArgumentType = false,
                                         reportUnknownLambdaType = false,
                                         reportUnknownMemberType = false,
                                         reportUnknownParameterType = false,
                                         reportUnknownVariableType = false,
-                                        reportMissingTypeStubs = false
+                                        reportMissingTypeStubs = false,
+                                        reportInvalidCast = false
                                     }
                                 }
                             }
