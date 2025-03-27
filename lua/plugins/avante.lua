@@ -12,16 +12,18 @@ return {
         provider = "mistral_code", -- "mistral"
         vendors = {
             mistral_code = {
+                __inherited_from = "openai",
                 api_key_name = "MISTRAL_API_KEY",
                 endpoint = "https://api.mistral.ai/v1/",
                 model = "codestral-latest",
-                __inherited_from = "openai",
+                max_tokens = 4096,
             },
             mistral = {
+                __inherited_from = "openai",
                 api_key_name = "MISTRAL_API_KEY",
                 endpoint = "https://api.mistral.ai/v1/",
                 model = "mistral-large-latest",
-                __inherited_from = "openai",
+                max_tokens = 4096,
             }
         }
     },

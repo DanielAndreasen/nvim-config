@@ -12,5 +12,6 @@ return {
         lazy = false,
         priority = 1000,
     },
-    { "fenetikm/falcon" }
+    { "fenetikm/falcon" },
+    { "rmehri01/onenord.nvim"}
 }

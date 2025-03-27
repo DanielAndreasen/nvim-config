@@ -100,15 +100,14 @@ return {
                 vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
                 vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
                 vim.keymap.set("n", "<leader>vd", function() vim.lsp.buf.open_flaot() end, opts)
-                vim.keymap.set("n", "gn", function() vim.diagnostic.goto_next() end, opts)
-                vim.keymap.set("n", "gp", function() vim.diagnostic.goto_prev() end, opts)
+                vim.keymap.set("n", "gn", function() vim.diagnostic.jump({count=1, float=true}) end, opts)
+                vim.keymap.set("n", "gp", function() vim.diagnostic.jump({count=-1, float=true}) end, opts)
                 vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
-                vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
-                vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
+                vim.keymap.set("n", "gri", function() vim.lsp.buf.implementation() end, opts)
+                vim.keymap.set("n", "grr", function() vim.lsp.buf.references() end, opts)
+                vim.keymap.set("n", "grn", function() vim.lsp.buf.rename() end, opts)
                 vim.keymap.set("n", "<leader>vh", function() vim.lsp.buf.signature_help() end, opts)
             end)
-
-
 
             require('mason-lspconfig').setup({
                 ensure_installed = {
@@ -156,7 +155,8 @@ return {
                                         reportUnknownParameterType = false,
                                         reportUnknownVariableType = false,
                                         reportMissingTypeStubs = false,
-                                        reportInvalidCast = false
+                                        reportInvalidCast = false,
+                                        reportUntypedFunctionDecorator = false,
                                     }
                                 }
                             }
@@ -218,7 +218,6 @@ return {
                                     "--quiet",
                                     "--stdin-filename",
                                     vim.api.nvim_buf_get_name(0),
-                                    -- "-",
                                 },
                                 stdin = true,
                             }
@@ -231,7 +230,6 @@ return {
                                     "--quiet",
                                     "--stdin-filename",
                                     vim.api.nvim_buf_get_name(0),
-                                    -- "-",
                                 },
                                 stdin = true,
                             }
@@ -239,19 +237,19 @@ return {
 
                     },
 
-                    -- sql = {
-                    --     function()
-                    --         return {
-                    --             exe = "sql-formatter",
-                    --             args = {
-                    --                 "--fix",
-                    --                 "--l postgresql",
-                    --                 "--",
-                    --             },
-                    --             stdin = false,
-                    --         }
-                    --     end,
-                    -- },
+                    sql = {
+                        function()
+                            return {
+                                exe = "sql-formatter",
+                                args = {
+                                    "--fix",
+                                    "--l postgresql",
+                                    "--",
+                                },
+                                stdin = false,
+                            }
+                        end,
+                    },
 
                     sh = {
                         require("formatter.filetypes.sh").shfmt,

@@ -5,8 +5,9 @@ end
 
 -- ColorMyPencils('terafox')
 -- ColorMyPencils('nightfox')
+ColorMyPencils('nordfox')
 -- ColorMyPencils('carbonfox')
-ColorMyPencils('kanagawa-wave')
+-- ColorMyPencils('kanagawa-wave')
 -- ColorMyPencils('kanagawa-dragon')
 -- ColorMyPencils('deus')
 -- ColorMyPencils('dark_flat')
@@ -16,6 +17,7 @@ ColorMyPencils('kanagawa-wave')
 -- ColorMyPencils('falcon')
 -- ColorMyPencils('everforest')
 -- ColorMyPencils('oldworld')
+-- ColorMyPencils('onenord')
 
 vim.opt.cursorline = true
 vim.api.nvim_set_hl(0, 'CursorLine', { bg = '#361c1c' })
