@@ -7,7 +7,7 @@ end
 -- ColorMyPencils('nightfox')
 -- ColorMyPencils('nordfox')
 -- ColorMyPencils('carbonfox')
-ColorMyPencils('kanagawa-wave')
+-- ColorMyPencils('kanagawa-wave')
 -- ColorMyPencils('kanagawa-dragon')
 -- ColorMyPencils('deus')
 -- ColorMyPencils('dark_flat')
@@ -16,7 +16,7 @@ ColorMyPencils('kanagawa-wave')
 -- ColorMyPencils('melange')
 -- ColorMyPencils('falcon')
 -- ColorMyPencils('everforest')
--- ColorMyPencils('oldworld')
+ColorMyPencils('oldworld')
 -- ColorMyPencils('onenord')
 
 vim.opt.cursorline = true

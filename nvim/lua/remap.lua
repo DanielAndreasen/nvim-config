@@ -14,8 +14,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = 'Move marked up' })
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
+-- vim.keymap.set("n", "n", "nzzzv")
+-- vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "<leader><space>", ":nohl<CR>", hush)
 
@@ -28,5 +28,3 @@ vim.keymap.set("v", ">", ">gv")
 
 vim.keymap.set("v", "<space>", ":fold<CR>", hush)
 vim.keymap.set("n", "<space>", "zA", hush)
-
-vim.keymap.set("v", "<leader>ad", "<leader>ae Can you write a docstring for this?<CR>")
